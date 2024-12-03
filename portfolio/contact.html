@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #000;
+            position: relative;
+            z-index: 0;
+            padding-bottom: 50px; /* Add padding to ensure there's space at the bottom when scrolling */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 110px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 140px;
+            margin-left: 50px;
+            flex-grow: 1;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.306);
+        }
+
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links a:hover {
+            color: #ff9900;
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-left: 10px;
+        }
+
+        main {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin-left: 15px;
+        }
+
+        .social-icons img {
+            width: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="playground.html">playground</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pray4christy" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:christy.long04@gmail.com" target="_blank">
+                        <img src="mail.png" alt="Email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/christy-long" target="_blank">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="contact-info">
+                <h2>Get in Touch!</h2>
+                <p class="contact-info">Email: <a href="mailto:christy.long04@gmail.com">christy.long04@gmail.com</a></p>
+                <p class="contact-info">Phone: (123) 456-7890</p>
+                <p class="contact-info">Find me on social media:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pray4christy" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:christy.long04@gmail.com" target="_blank">
+                        <img src="mail.png" alt="Email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/christy-long" target="_blank">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </section> 
+        </main>
+
+        <footer> 
+            <p>&copy; 2024 My Portfolio</p> 
+        </footer>
+    </div>
+</body>
+</html>
