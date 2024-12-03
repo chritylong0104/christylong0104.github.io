@@ -8,199 +8,204 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('background.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .container {
-        background-image: url('background.png');
-        background-size: cover;
-        background-position: center;
-        min-height: 100vh;
-        text-align: center;
-        color: #000;
-        position: relative;
-        z-index: 0;
-        padding-bottom: 50px; /* Add padding to ensure there's space at the bottom when scrolling */
-    }
-    .left-text, .text-below, header, nav {
-        position: relative; /* Keep these elements above the stars */
-        z-index: 1; /* Ensure they stay visible over the stars background */
-    }
-    header {
-        display: flex;
-        justify-content: space-between; /* Space between logo and navigation */
-        align-items: center;
-        padding: 20px;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
-    .logo {
-        width: 110px;
-        height: auto;
-    }
+        .container {
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #000;
+            position: relative;
+            z-index: 0;
+            padding-bottom: 50px; 
+        }
 
-    .nav-links {
-        list-style: none;
-        display: flex;
-        justify-content: center; /* Center the links horizontally */
-        gap: 140px; /* Increase the space between links */
-        margin-left: 50px;
-        flex-grow: 1; /* Allow navigation to stretch */
-    }
+        .left-text, .text-below, header, nav {
+            position: relative; 
+            z-index: 1; 
+        }
 
-    .nav-links li {
-        display: inline;
-    }
+        header {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 20px;
+        }
 
-    .nav-links a {
-        font-family: 'Inter', sans-serif; /* Use the Inter font */
-        font-size: 1.5rem; /* Increase the font size */
-        letter-spacing: 2px; /* Add spacing between letters */
-        text-decoration: none; /* Remove underline */
-        color: black; /* Change link color (can adjust as needed) */
-        font-weight: 600; /* Make it bold for better visibility */
-        transition: color 0.3s ease; /* Add a hover effect transition */
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.306);
-    }
+        .logo {
+            width: 110px;
+            height: auto;
+        }
 
-    nav {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center; /* Center the navigation links */
-    }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 140px;
+            margin-left: 50px;
+            flex-grow: 1;
+        }
 
-    .nav-links a:hover {
-        color: #ff9900; /* Change color on hover for interaction */
-    }
+        .nav-links li {
+            display: inline;
+        }
 
-    .social-icons img {
-        width: 20px;
-        margin-left: 10px;
-    }
+        .nav-links a {
+            font-family: 'Inter', sans-serif; 
+            font-size: 1.5rem; 
+            letter-spacing: 2px; 
+            text-decoration: none; /* Remove underline */
+            color: black; /* Change link color (can adjust as needed) */
+            font-weight: 600; /* Make it bold for better visibility */
+            transition: color 0.3s ease; /* Add a hover effect transition */
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.306);
+        }
 
-    main {
-        margin-top: 100px;
-    }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center; /* Center the navigation links */
+        }
 
-    h1 {
-        font-size: 3rem;
-        margin: 0;
-    }
+        .nav-links a:hover {
+            color: #ff9900; /* Change color on hover for interaction */
+        }
 
-    p {
-        font-size: 1.2rem;
-    }
+        .social-icons img {
+            width: 20px;
+            margin-left: 10px;
+        }
 
-    .cta {
-        margin-top: 20px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #555;
-    }
+        main {
+            margin-top: 100px;
+        }
 
-    .social-icons {
-        display: flex;
-        align-items: center;
-    }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
 
-    .social-icons a {
-        margin-left: 15px; /* Adjust space between social icons */
-    }
+        p {
+            font-size: 1.2rem;
+        }
 
-    .social-icons img {
-        width: 25px; /* Adjust icon size */
-        transition: transform 0.3s ease; /* Add a hover effect */
-    }
+        .cta {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #555;
+        }
 
-    .social-icons img:hover {
-        transform: scale(1.2); /* Enlarge icon on hover */
-    }
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
 
-    /* New styles for image and text section */
-    .about-me {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-        padding: 20px;
-    }
+        .social-icons a {
+            margin-left: 15px; /* Adjust space between social icons */
+        }
 
-    .about-me img {
-        width: 200px; /* Size of your picture */
-        height: auto;
-        border-radius: 50%; /* Make the image circular */
-        margin-right: 20px;
-    }
+        .social-icons img {
+            width: 25px; /* Adjust icon size */
+            transition: transform 0.3s ease; /* Add a hover effect */
+        }
 
-    .about-me .description {
-        max-width: 600px;
-        text-align: left;
-    }
+        .social-icons img:hover {
+            transform: scale(1.2); /* Enlarge icon on hover */
+        }
 
-    .resume-link {
-        margin-top: 20px;
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff9900;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
+        /* New styles for image and text section */
+        .about-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            padding: 20px;
+        }
 
-    .resume-link:hover {
-        background-color: #ff6600;
-    }
-</style>
+        .about-me img {
+            width: 500px; /* Size of your picture */
+            height: auto;
+            border-radius: 50%; /* Make the image circular */
+            margin-right: 20px;
+            margin-top: -10%;
+        }
+
+        .description {
+            max-width: 600px;
+            text-align: left;
+            font-family: 'Nunito', sans-serif; /* Apply Nunito font here */
+            margin-top: -10%;
+        }
+
+        /* Separate "Hello!" and description with a distinct style */
+        .hello {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px; /* Add some space below "Hello!" */
+            color: #333;
+            text-shadow: 0px 0px 10px rgba(58, 147, 255, 0.292);
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            color: #333;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <header>
-        <a href="index.html">
-            <img src="logo.png" alt="Logo" class="logo">
-        </a>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">home</a></li>
-                <li><a href="playground.html">playground</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/pray4christy" target="_blank">
-                    <img src="instagram.png" alt="Instagram">
-                </a>
-                <a href="mailto:christy.long04@gmail.com" target="_blank">
-                    <img src="mail.png" alt="Email">
-                </a>
-                <a href="https://www.linkedin.com/in/christy-long" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn">
-                </a>
-            </div>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="playground.html">playground</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">resume</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/pray4christy" target="_blank">
+                        <img src="instagram.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:christy.long04@gmail.com" target="_blank">
+                        <img src="mail.png" alt="Email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/christy-long" target="_blank">
+                        <img src="linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </nav>
+        </header>
 
-    <main>
-        <!-- New About Me Section with Picture and Resume Link -->
-        <section class="about-me">
-            <img src="crispy.JPG" alt="Christy Long">
-            <div class="description">
-                <h3>About Me</h3>
-                <p>Hello! I’m Christy, a passionate UI/UX designer and full-stack developer. I enjoy creating intuitive, user-centered designs and coding dynamic solutions that solve real-world problems.</p>
-                <a href="Christy_Long_CS_May2027.pdf" class="resume-link" target="_blank">Download My Resume</a>
-            </div>
-        </section>
-    </main>
+        <main>
+            <section class="about-me">
+                <img src="crispy.JPG" alt="Christy Long">
+                <div class="description">
+                    <h3 class="hello">Hello!</h3>
+                    <p class="about-description"><p>Hi, I'm Christy and I hail from Atlanta. I'm passionate about using visual storytelling to solve real-world problems, combining design and development to address bigger issues. Currently, I’m a second-year Computational Media major and Industrial Design minor at Georgia Tech, where I continue to explore how technology and design intersect.</p>
+                    <p>When I'm not diving into projects, you’ll likely find me scrolling through Pinterest for inspiration, riding my scooter around, or simply designing! Designing to me is all about telling a story using empathy, creativity, and a little bit of magic!</p>
+                </div>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
-</div>
+        <footer>
+            <p>&copy; 2024 My Portfolio</p>
+        </footer>
+    </div>
+    
 </body>
 </html>
